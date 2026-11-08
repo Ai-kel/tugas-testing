@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator QA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="display" class="display" placeholder="0">
+        <div class="buttons">
+            <!-- Baris 1: Kontrol & Simbol Dasar -->
+            <button onclick="clearDisplay()" class="btn-clear">C</button>
+            <button onclick="deleteLast()" class="btn-delete">DEL</button>
+            <button onclick="appendCharacter('(')" class="btn-operator">(</button>
+            <button onclick="appendCharacter(')')" class="btn-operator">)</button>
+
+            <!-- Baris 2: Operasi Ilmiah -->
+            <button onclick="appendCharacter('%')" class="btn-operator">%</button>
+            <button onclick="calculateSquareRoot()" class="btn-operator">√</button>
+            <button onclick="calculateSquare()" class="btn-operator">x²</button>
+            <button onclick="appendCharacter('**')" class="btn-operator">xʸ</button>
+
+            <!-- Baris 3: Angka -->
+            <button onclick="appendCharacter('7')">7</button>
+            <button onclick="appendCharacter('8')">8</button>
+            <button onclick="appendCharacter('9')">9</button>
+            <button onclick="appendCharacter('/')" class="btn-operator">÷</button>
+            
+            <!-- Baris 4: Angka -->
+            <button onclick="appendCharacter('4')">4</button>
+            <button onclick="appendCharacter('5')">5</button>
+            <button onclick="appendCharacter('6')">6</button>
+            <button onclick="appendCharacter('*')" class="btn-operator">×</button>
+            
+            <!-- Baris 5: Angka -->
+            <button onclick="appendCharacter('1')">1</button>
+            <button onclick="appendCharacter('2')">2</button>
+            <button onclick="appendCharacter('3')">3</button>
+            <button onclick="appendCharacter('-')" class="btn-operator">−</button>
+            
+            <!-- Baris 6: Angka dan Koma -->
+            <button onclick="appendCharacter('0')" class="btn-zero">0</button>
+            <button onclick="appendCharacter('.')">.</button>
+            <button onclick="appendCharacter('+')" class="btn-operator">+</button>
+            
+            <!-- Baris 7: Sama Dengan -->
+            <button onclick="calculateResult()" class="btn-equal">=</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
